@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Playdate
 from .serializers import PlaydateSerializer
-from drf_api.permissions import IsOwnerOrReadOnly
+from .permissions import IsOwnerOrReadOnly
 
 # Create your views here.
 
