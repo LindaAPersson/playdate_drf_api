@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Playdate
 
 class PlaydateSerializer(serializers.ModelSerializer):
-    organizer = serializers.ReadOnlyField(source='user')
+    organizer = serializers.ReadOnlyField(source='organizer.username')
 
     class Meta:
         model = Playdate
