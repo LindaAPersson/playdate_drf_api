@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure--79wvc183^kkuosx8975_3m!6hmjuwy9netrs*uh2kk@7i&crs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['8000-lindaaperss-playdatedrf-3uf9cm7g7q3.ws-eu110.gitpod.io']
 
 
 # Application definition
@@ -45,9 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'clodinary_storage',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'playdate',
 ]
 
 MIDDLEWARE = [
