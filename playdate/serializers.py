@@ -4,6 +4,7 @@ from .models import Playdate
 class PlaydateSerializer(serializers.ModelSerializer):
     organizer = serializers.ReadOnlyField(source='organizer.username')
     is_organizer = serializers.SerializerMethodField()
+    comments_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -25,5 +26,8 @@ class PlaydateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Playdate
         fields = [
-            'id', 'title', 'image', 'date', 'location', 'description', 'organizer', 'prize', 'created_at', 'parent_stay_required', 'is_organizer'
+            'id', 'title', 'image', 'date', 
+            'location', 'description', 'organizer', 
+            'prize', 'created_at', 'parent_stay_required', 
+            'is_organizer', 'comments_count'
         ]
