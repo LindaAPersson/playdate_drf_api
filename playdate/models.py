@@ -4,6 +4,13 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Playdate(models.Model):
+    AGE_CHOICES = [
+        ('infant', 'Infant (0-2 years)'),
+        ('toddler', 'Toddler (2-5 years)'),
+        ('child', 'Child (5-12 years)'),
+        ('teenager', 'Teenager (13-18 years)'),
+    ]
+
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/', default='../default_posts_kcstnt', blank=True)
     date = models.DateField()
@@ -13,6 +20,8 @@ class Playdate(models.Model):
     prize = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     parent_stay_required = models.BooleanField(default=True)
+    time = models.TimeField()
+    suitable_age = models.CharField(max_length=20, choices=AGE_CHOICES)
 
     class Meta:
         ordering = ['date']

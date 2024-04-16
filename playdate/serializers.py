@@ -29,5 +29,5 @@ class PlaydateSerializer(serializers.ModelSerializer):
             'id', 'title', 'image', 'date', 
             'location', 'description', 'organizer', 
             'prize', 'created_at', 'parent_stay_required', 
-            'is_organizer', 'comments_count'
+            'is_organizer', 'comments_count', 'time', 'suitable_age'
         ]
