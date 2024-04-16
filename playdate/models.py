@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Playdate(models.Model):
     AGE_CHOICES = [
+        ('all', 'All Ages'),
         ('infant', 'Infant (0-2 years)'),
         ('toddler', 'Toddler (2-5 years)'),
         ('child', 'Child (5-12 years)'),
