@@ -4,17 +4,13 @@ from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Contact
 from .serializers import ContactSerializer
 
-# Create your views here.
 
-class AdminCanReadContactPermission(permissions.BasePermission):
-    
-    def has_permission(self, request, view):
-        return request.user and request.user.is_superuser
+# Create your views here.
 
 class ContactList(generics.ListCreateAPIView):
     
     serializer_class = ContactSerializer
-    permission_classes = [AdminCanReadContactPermission]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
 
     filter_backends = [
@@ -30,5 +26,5 @@ class ContactList(generics.ListCreateAPIView):
 class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
     
     serializer_class = ContactSerializer
-    permission_classes = [AdminCanReadContactPermission]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
