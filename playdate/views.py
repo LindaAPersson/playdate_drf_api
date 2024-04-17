@@ -38,7 +38,7 @@ class PlaydateList(generics.ListCreateAPIView):
         'suitable_age'
     ]
     search_fields = [
-        'organizer',
+        'organizer__username',
         'title',
         'location',
     ]
