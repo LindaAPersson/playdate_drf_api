@@ -25,7 +25,7 @@ class Playdate(models.Model):
     suitable_age = models.CharField(max_length=20, choices=AGE_CHOICES)
 
     class Meta:
-        ordering = ['date']
+        ordering = ['-date']
 
     def __str__(self):
         return self.title
