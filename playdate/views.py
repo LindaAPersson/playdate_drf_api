@@ -16,11 +16,14 @@ class PlaydateList(generics.ListCreateAPIView):
         queryset = Playdate.objects.annotate(
         comments_count=Count('comment', distinct=True)
         )
-        year = self.request.query_params.get('year')
-        month = self.request.query_params.get('month')
-        if year and month:
-            queryset = queryset.filter(date__year=year, date__month=month)
-
+        start_date = self.request.query_params.get('start_date')
+        end_date = self.request.query_params.get('end_date')
+        if start_date:
+            start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
+            queryset = queryset.filter(date__gte=start_date)
+        if end_date:
+            end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
+            queryset = queryset.filter(date__lte=end_date)
         return queryset
 
     def perform_create(self, serializer):
