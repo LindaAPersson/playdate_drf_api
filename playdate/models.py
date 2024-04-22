@@ -31,4 +31,4 @@ class Playdate(models.Model):
         return self.title
     
     def formatted_time(self):
-        return self.time.strftime("%H:%M")
+        return self.time.strftime(['%H:%M'])

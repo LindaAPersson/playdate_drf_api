@@ -5,6 +5,8 @@ class PlaydateSerializer(serializers.ModelSerializer):
     organizer = serializers.ReadOnlyField(source='organizer.username')
     is_organizer = serializers.SerializerMethodField()
     comments_count = serializers.ReadOnlyField()
+    time = serializers.TimeField(format='%H:%M')
+
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
