@@ -5,6 +5,7 @@ from .models import Playdate
 from .serializers import PlaydateSerializer
 from .permissions import IsOwnerOrReadOnly
 from datetime import date
+from .filters import PlaydateFilter
 
 # Create your views here.
 
@@ -30,13 +31,7 @@ class PlaydateList(generics.ListCreateAPIView):
         filters.SearchFilter,
         DjangoFilterBackend,
     ]
-    filterset_fields = [
-        'organizer',
-        'title',
-        'location',
-        'parent_stay_required',
-        'suitable_age'
-    ]
+    
     search_fields = [
         'organizer__username',
         'title',
@@ -45,6 +40,7 @@ class PlaydateList(generics.ListCreateAPIView):
     ordering_fields = [
         'date',
     ]
+    filterset_class = PlaydateFilter
 
 class PlaydateListDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PlaydateSerializer
