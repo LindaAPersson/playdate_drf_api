@@ -24,7 +24,7 @@ class ReviewList(generics.ListCreateAPIView):
         serializer.save(user=self.request.user)
 
 
-class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
+class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = ReviewDetailSerializer

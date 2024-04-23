@@ -29,4 +29,5 @@ urlpatterns = [
     path('', include('playdate.urls')),
     path('', include('comments.urls')),
     path('', include('contact.urls')),
+    path('', include('review.urls')),
 ]
