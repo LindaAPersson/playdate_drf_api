@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     'playdate',
     'comments',
     'contact',
+    'review',
 ]
 SITE_ID = 1
 MIDDLEWARE = [
