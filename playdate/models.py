@@ -32,3 +32,6 @@ class Playdate(models.Model):
     
     def formatted_time(self):
         return self.time.strftime(['%H:%M'])
+    
+    def has_taken_place(self):
+        return self.date < datetime.now()
