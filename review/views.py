@@ -6,8 +6,9 @@ from .serializers import ReviewSerializer, ReviewDetailSerializer
 
 # Create your views here.
 
+
 class ReviewList(generics.ListCreateAPIView):
-    
+
     serializer_class = ReviewSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Review.objects.all()
@@ -16,16 +17,16 @@ class ReviewList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
-        'playdate_post', 
-        'user__username'   
+        'playdate_post',
+        'user__username'
     ]
-    
+
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
 
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
-    
+
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = ReviewDetailSerializer
     queryset = Review.objects.all()
