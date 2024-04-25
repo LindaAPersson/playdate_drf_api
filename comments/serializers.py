@@ -11,7 +11,7 @@ class CommentSerializer(serializers.ModelSerializer):
     def get_is_user(self, obj):
         request = self.context['request']
         return request.user == obj.user
-    
+
     def get_created_at(self, obj):
         return naturaltime(obj.created_at)
 
@@ -19,9 +19,8 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = [
             'id', 'user', 'is_user', 'created_at', 'playdate_post', 'content'
-        ]   
+        ]
+
 
 class CommentDetailSerializer(CommentSerializer):
-    
     playdate_post = serializers.ReadOnlyField(source='playdate_post.id')
-

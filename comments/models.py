@@ -4,6 +4,7 @@ from playdate.models import Playdate
 
 # Create your models here.
 
+
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     playdate_post = models.ForeignKey(Playdate, on_delete=models.CASCADE)
