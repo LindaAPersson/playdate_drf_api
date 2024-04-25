@@ -7,8 +7,8 @@ from .serializers import ContactSerializer
 
 # Create your views here.
 
+
 class ContactList(generics.ListCreateAPIView):
-    
     serializer_class = ContactSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
@@ -17,14 +17,14 @@ class ContactList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
-        'name',    
+        'name',
     ]
 
     def perform_create(self, serializer):
         serializer.save()
 
+
 class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
-    
     serializer_class = ContactSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
