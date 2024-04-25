@@ -88,6 +88,13 @@ This file only contains the exstensive testing done to the webpage. All other in
 </details>
 
 <details>
+<summary> Permission
+</summary>
+
+![commentPermission](documentation/validation/comments/commentsPremission.png)
+</details>
+
+<details>
 <summary> Serializer
 </summary>
 
@@ -173,6 +180,13 @@ This file only contains the exstensive testing done to the webpage. All other in
 </summary>
 
 ![reviewModels](documentation/validation/review/reviewModles.png)
+</details>
+
+<details>
+<summary> Permission
+</summary>
+
+![reviewPermission](documentation/validation/review/reviewPermission.png)
 </details>
 
 <details>
@@ -305,3 +319,10 @@ Tests done in DEV mode:
 |               | Enter admin panel | Admin can edit contact forms  | PASS |
 |               | Enter admin panel | Admin can delete contact  | PASS |
 |               | Enter admin panel | Admin can see all users  | PASS |
+
+## Bugs
+### Resolved bugs
+
+
+
+### Unresolved bugs
