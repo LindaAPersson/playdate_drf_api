@@ -9,13 +9,14 @@ from .filters import PlaydateFilter
 
 # Create your views here.
 
+
 class PlaydateList(generics.ListCreateAPIView):
-    
     serializer_class = PlaydateSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
     def get_queryset(self):
         queryset = Playdate.objects.annotate(
-        comments_count=Count('comment', distinct=True)
+            comments_count=Count('comment', distinct=True)
         )
         year = self.request.query_params.get('year')
         month = self.request.query_params.get('month')
@@ -31,7 +32,7 @@ class PlaydateList(generics.ListCreateAPIView):
         filters.SearchFilter,
         DjangoFilterBackend,
     ]
-    
+
     search_fields = [
         'organizer__username',
         'title',
@@ -42,9 +43,8 @@ class PlaydateList(generics.ListCreateAPIView):
     ]
     filterset_class = PlaydateFilter
 
+
 class PlaydateListDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PlaydateSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Playdate.objects.all()
-
-    

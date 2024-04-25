@@ -7,5 +7,6 @@ class CurrentUserSerializer(UserDetailsSerializer):
 
     class Meta(UserDetailsSerializer.Meta):
         fields = UserDetailsSerializer.Meta.fields + (
-            'user_id', 
+            'user_id',
         )
+        

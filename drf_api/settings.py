@@ -60,8 +60,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-lindaaperss-playdatedrf-3uf9cm7g7q3.ws-eu110.gitpod.io', '.herokuapp.com']
-CSRF_TRUSTED_ORIGINS = [ "https://8000-lindaaperss-playdatedrf-3uf9cm7g7q3.ws-eu110.gitpod.io"] 
+ALLOWED_HOSTS = ['8000-lindaaperss-playdatedrf-3uf9cm7g7q3.ws-eu110.gitpod.io',
+                 '.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-lindaaperss-playdatedrf-3uf9cm7g7q3.ws-eu110.gitpod.io"]
 
 # Application definition
 
@@ -151,7 +153,6 @@ else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
-
 
 
 # Password validation
