@@ -3,6 +3,19 @@ from .models import Playdate
 
 
 class PlaydateSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Playdate model.
+
+    Attributes:
+        organizer (ReadOnlyField): Username of the organizer of the playdate.
+        is_organizer (SerializerMethodField): Indicates whether the current user is the organizer of the playdate.
+        comments_count (ReadOnlyField): Total number of comments on the playdate.
+        time (TimeField): Field representing the time of the playdate.
+    
+    Methods:
+        validate_image: Validates the size and dimensions of the image uploaded for the playdate.
+        get_is_organizer: Determines if the current user is the organizer of the playdate.
+    """
     organizer = serializers.ReadOnlyField(source='organizer.username')
     is_organizer = serializers.SerializerMethodField()
     comments_count = serializers.ReadOnlyField()

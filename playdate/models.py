@@ -6,6 +6,23 @@ from datetime import datetime
 
 
 class Playdate(models.Model):
+    """
+    Model representing a playdate event.
+
+    Attributes:
+        AGE_CHOICES (list of tuples): Choices for suitable_age field.
+        title (CharField): Title of the playdate.
+        image (ImageField): Image associated with the playdate.
+        date (DateField): Date of the playdate.
+        location (CharField): Location of the playdate.
+        description (TextField): Description of the playdate.
+        organizer (ForeignKey): User who organized the playdate.
+        prize (DecimalField): Prize associated with the playdate (optional).
+        created_at (DateTimeField): Timestamp when the playdate was created.
+        parent_stay_required (BooleanField): Indicates if parent stay is required.
+        time (TimeField): Time of the playdate.
+        suitable_age (CharField): Suitable age group for the playdate.
+    """
     AGE_CHOICES = [
         ('all', 'All Ages'),
         ('infant', 'Infant (0-2 years)'),

@@ -11,6 +11,13 @@ from .filters import PlaydateFilter
 
 
 class PlaydateList(generics.ListCreateAPIView):
+    """
+    Views for managing playdates.
+
+    PlaydateList:
+        - GET: Retrieves a list of playdates.
+        - POST: Creates a new playdate.
+    """
     serializer_class = PlaydateSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
@@ -45,6 +52,14 @@ class PlaydateList(generics.ListCreateAPIView):
 
 
 class PlaydateListDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Views for managing playdates.
+
+    PlaydateListDetail:
+        - GET: Retrieves a specific playdate.
+        - PUT: Updates a specific playdate.
+        - DELETE: Deletes a specific playdate.
+    """
     serializer_class = PlaydateSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Playdate.objects.all()
