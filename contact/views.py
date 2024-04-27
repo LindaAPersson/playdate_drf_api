@@ -9,6 +9,12 @@ from .serializers import ContactSerializer
 
 
 class ContactList(generics.ListCreateAPIView):
+    """
+    Views for handling contact messages.
+
+    Examples:
+        ContactList: Handles listing and creating contact messages.
+    """
     serializer_class = ContactSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
@@ -25,6 +31,12 @@ class ContactList(generics.ListCreateAPIView):
 
 
 class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Views for handling contact messages.
+
+    Examples:
+        ContactDetail: Handles retrieving, updating, or deleting a specific contact message.
+    """
     serializer_class = ContactSerializer
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
