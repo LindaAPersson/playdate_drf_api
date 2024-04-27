@@ -6,6 +6,18 @@ from playdate.models import Playdate
 
 
 class Review(models.Model):
+    """
+    Model to represent reviews for playdate posts.
+
+    Attributes:
+        playdate_post (ForeignKey): The playdate post associated with the review.
+        user (ForeignKey): The user who made the review.
+        comment (TextField): The content of the review.
+        attendance (BooleanField): Indicates if the user attended the playdate.
+        bring_this (TextField, optional): Item(s) brought to the playdate.
+        age_recommendation (CharField, optional): Suitable age recommendation.
+        created_at (DateTimeField): The timestamp when the review was created.
+    """
     playdate_post = models.ForeignKey(Playdate, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.TextField()

@@ -4,6 +4,14 @@ from .models import Review
 
 
 class ReviewSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Review model.
+
+    Attributes:
+        user: A read-only field to represent the username of the user who made the review.
+        is_user: A method field to check if the current user is the owner of the review.
+        created_at: A method field to represent the creation time of the review in natural language.
+    """
     user = serializers.ReadOnlyField(source='user.username')
     is_user = serializers.SerializerMethodField()
     created_at = serializers.SerializerMethodField()

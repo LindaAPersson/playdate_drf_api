@@ -8,7 +8,12 @@ from .serializers import ReviewSerializer, ReviewDetailSerializer
 
 
 class ReviewList(generics.ListCreateAPIView):
+    """
+    API views for the Review model.
 
+    Attributes:
+        ReviewList: A view to list and create reviews.
+    """
     serializer_class = ReviewSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Review.objects.all()
@@ -26,7 +31,12 @@ class ReviewList(generics.ListCreateAPIView):
 
 
 class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    API views for the Review model.
 
+    Attributes:
+        ReviewDetail: A view to retrieve, update, and delete reviews.
+    """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = ReviewDetailSerializer
     queryset = Review.objects.all()
