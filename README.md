@@ -72,6 +72,22 @@ The Contact model contains the following fields: name, email, subject, message, 
 
 ## Technologies used
 
+### Languages & Frameworks
+* Python
+* Django
+
+### Libraries & Tools
+* Cloudinary to store static files
+* Dbdiagram.io used for the database schema diagram
+* Git was used for version control via Gitpod terminal to push the code to GitHub
+* GitHub was used as a remote repository to store project code
+* Gitpod - a virtual IDE workspace used to build this site
+* Django REST Framework was used to build the back-end API
+* Django AllAuth was used for user authentication
+* Pillow was used for image processing and validation
+* Psycopg2 was used as a PostgreSQL database adapter for Python
+* ElephantSQL – deployed project on Heruko uses a ElephantSQL database
+
 ## Deploying
 
 ## Credits
