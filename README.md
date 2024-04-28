@@ -27,7 +27,7 @@ Agile Methodology was used to help prioritize and organize tasks for the hole we
 
 To see the Epic and user stroies in full: [Project Board](https://github.com/users/LindaAPersson/projects/8).
 
-## User stories
+## User storie
 
 ### Admin user
 The back-end section of the project focuses on its administrative side, so that's the only user story I will focus on:
@@ -35,6 +35,8 @@ The back-end section of the project focuses on its administrative side, so that'
 As an admin, I want to be able to create, edit, and delete users, playdates, comments, and reviews so that I can have control over the content of the application and remove any potential inappropriate content. Additionally, I want to be able to read all the contact forms that users send.
 
 ## Database Design
+The following models were created to represent the database model structure of the application:
+![database diagram](documentation/readme/databsaDiagram.png)
 
 ### Models
 
