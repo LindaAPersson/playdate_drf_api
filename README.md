@@ -67,8 +67,115 @@ The Contact model contains the following fields: name, email, subject, message, 
 ## Features
 
 ### Future features
+In DEV:
+
+<details>
+<summary> Start page
+</summary>
+
+![Root](documentation/readme/features/root.png)
+</details>
+
+<details>
+<summary> Playdate
+</summary>
+
+![playdate](documentation/readme/features/playdate.png)
+</details>
+
+<details>
+<summary> Playdate Filter
+</summary>
+
+![playdate](documentation/readme/features/playdateFilter.png)
+</details>
+
+<details>
+<summary> Playdate Detail
+</summary>
+
+![playdate](documentation/readme/features/playdateDetail.png)
+</details>
+
+<details>
+<summary> Add, Edit, Delete Playdate (signed in)
+</summary>
+
+![Add playdate](documentation/readme/features/addPlaydate.png)
+![Edit playdate](documentation/readme/features/editPlaydate.png)
+![Delete playdate](documentation/readme/features/deletePlaydate.png)
+</details>
+
+<details>
+<summary> Comment
+</summary>
+
+![comment](documentation/readme/features/comments.png)
+</details>
+
+<details>
+<summary> Comment Filter
+</summary>
+
+![comment filter](documentation/readme/features/commmentsFilter.png)
+</details>
+
+<details>
+<summary> Comment Detail
+</summary>
+
+![comment detail](documentation/readme/features/commentDetail.png)
+</details>
+
+<details>
+<summary> Add, Edit, Delete Commment (signed in)
+</summary>
+
+![Add comment](documentation/readme/features/addComment.png)
+![Edit Delete comment](documentation/readme/features/deletEditComment.png)
+</details>
+
+<details>
+<summary> Review
+</summary>
+
+![Review](documentation/readme/features/review.png)
+</details>
+
+<details>
+<summary> Review Filter
+</summary>
+
+![Review filter](documentation/readme/features/reviewFilter.png)
+</details>
+
+<details>
+<summary> Review Detail
+</summary>
+
+![Review detail](documentation/readme/features/reviewDetail.png)
+</details>
+
+<details>
+<summary> Add, Edit, Delete Review (signed in)
+</summary>
+
+![Add Review](documentation/readme/features/addReview.png)
+![Edit Review](documentation/readme/features/editReviiew.png)
+![Delete Review](documentation/readme/features/deleeteReview.png)
+</details>
+
+<details>
+<summary> Contact
+</summary>
+
+![contact](documentation/readme/features/contact.png)
+![contact form](documentation/readme/features/contactForm.png)
+</details>
 
 ## Testing
+
+To see all testing done, please see: [TESTING.md](TESTING.md)
 
 ## Technologies used
 
