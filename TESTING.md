@@ -213,13 +213,6 @@ This file only contains the exstensive testing done to the webpage. All other in
 ### DRF API
 
 <details>
-<summary> Permission
-</summary>
-
-![drfPermissions](documentation/validation/drf/drfPermissions.png)
-</details>
-
-<details>
 <summary> Serializer
 </summary>
 
@@ -322,7 +315,8 @@ Tests done in DEV mode:
 
 ## Bugs
 ### Resolved bugs
-
+* I encountered a bug where I had trouble logging out from the site after it was deployed. Despite repeated attempts, the logout functionality didn't work as expected. Then, I remembered that Code Institute had provided a solution for this exact issue in the walkthrough project. Following their guidance, I quickly implemented the solution, and the logout functionality began working seamlessly on the deployed site.
 
 
 ### Unresolved bugs
+* In the deployed version of the application, i encountered a bug where the playdates were not ordered by dates as expected. Despite specifying the ordering by date in the Meta class of the Playdate model, the deployed version failed to adhere to this ordering. Interestingly, the ordering worked perfectly fine in the development (DEV) mode.

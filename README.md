@@ -8,7 +8,8 @@ Link to API:
 [Link to playdate drf-api](https://playdate-drf-api-a577c80fbeb8.herokuapp.com/)
 
 Link to front-end site connected to the API:
-[Link to playdate](https://playdate-184e33ed70de.herokuapp.com/)
+[Link to Playdate](https://playdate-184e33ed70de.herokuapp.com/)
+[Link to Playdate README.md](https://github.com/LindaAPersson/playdate/blob/main/README.md)
 
 ## Agile Workflow
 
@@ -627,3 +628,4 @@ if 'CLIENT_ORIGIN_DEV' in os.environ:
 
 ## Credits
 * The Code Institute DRF-API walkthrough was used as an invaluable guide on how to build a DRF-API.
+* Code Institute Tutor Support for help with the filter sections. 
