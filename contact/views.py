@@ -1,6 +1,5 @@
 from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Contact
 from .serializers import ContactSerializer
 
@@ -16,7 +15,6 @@ class ContactList(generics.ListCreateAPIView):
         ContactList: Handles listing and creating contact messages.
     """
     serializer_class = ContactSerializer
-    permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()
 
     filter_backends = [
@@ -38,5 +36,4 @@ class ContactDetail(generics.RetrieveUpdateDestroyAPIView):
         ContactDetail: Handles retrieving, updating, or deleting a specific contact message.
     """
     serializer_class = ContactSerializer
-    permission_classes = [IsOwnerOrReadOnly]
     queryset = Contact.objects.all()

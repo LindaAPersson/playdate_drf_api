@@ -173,6 +173,87 @@ In DEV:
 ![contact form](documentation/readme/features/contactForm.png)
 </details>
 
+<details>
+<summary> Contact Detail
+</summary>
+
+![contact detail](documentation/readme/features/contactDetail.png)
+</details>
+
+<details>
+<summary> Edit, Delete Contact (signed in)
+</summary>
+
+![Edit contact](documentation/readme/features/editContact.png)
+![Delete contact](documentation/readme/features/deleteContact.png)
+</details>
+
+Deployed version:
+
+<details>
+<summary> Start page
+</summary>
+
+![Root](documentation/readme/featuresDeployed/root.png)
+</details>
+
+<details>
+<summary> Playdate
+</summary>
+
+![playdate](documentation/readme/featuresDeployed/playdate.png)
+</details>
+
+
+<details>
+<summary> Playdate Detail
+</summary>
+
+![playdate detail](documentation/readme/featuresDeployed/playdateDetaiil.png)
+</details>
+
+<details>
+<summary> Comment
+</summary>
+
+![comment](documentation/readme/featuresDeployed/comments.png)
+</details>
+
+<details>
+<summary> Comment Detail
+</summary>
+
+![comment detail](documentation/readme/featuresDeployed/commentsDetail.png)
+</details>
+
+<details>
+<summary> Review
+</summary>
+
+![Review](documentation/readme/featuresDeployed/reiew.png)
+</details>
+
+<details>
+<summary> Review Detail
+</summary>
+
+![Review detail](documentation/readme/featuresDeployed/reviewDetail.png)
+</details>
+
+<details>
+<summary> Contact
+</summary>
+
+![contact](documentation/readme/featuresDeployed/contact.png)
+</details>
+
+<details>
+<summary> Contact Detail
+</summary>
+
+![contact detail](documentation/readme/featuresDeployed/contactDetail.png)
+</details>
+
 ## Testing
 
 To see all testing done, please see: [TESTING.md](TESTING.md)
