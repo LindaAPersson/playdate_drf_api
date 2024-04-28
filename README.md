@@ -10,6 +10,23 @@ Link to API:
 Link to front-end site connected to the API:
 [Link to playdate](https://playdate-184e33ed70de.herokuapp.com/)
 
+## Agile Workflow
+
+Agile Methodology was used to help prioritize and organize tasks for the hole webpage. I used Project Boards on Github.
+
+* User stories were created by looking at epics and added on as the project was advancing.
+* Project Board was used to track progression of the task through the Todo, In progress and Done columns.
+
+<details>
+<summary> Userstories / Project board
+</summary>
+
+![issues.png](documentation/readme/issues.png)
+![projectboard.png](documentation/readme/kanBan.png)
+</details>
+
+To see the Epic and user stroies in full: [Project Board](https://github.com/users/LindaAPersson/projects/8).
+
 ## User stories
 
 ## Database Design
@@ -19,8 +36,6 @@ Link to front-end site connected to the API:
 ## Features
 
 ### Future features
-
-## Agile Workflow
 
 ## Testing
 
