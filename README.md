@@ -40,6 +40,30 @@ The following models were created to represent the database model structure of t
 
 ### Models
 
+#### User Model
+The User model contains information about the user. It is part of the Django allauth library.
+* ForeignKey relation with the Playdate model owner field
+Fo* reignKey relation with the Comment model owner field
+* ForeignKey relation with the Review model owner field
+
+#### Playdate Model
+The Playdate model contains the following fields: title, image, location, description, organizor, prize, created_at, parent_stay_required, time, suitable_age.
+* ForeignKey relation with the Comment model post field
+* ForeignKey relation with the Review model post field
+
+#### Comment Model
+The Comment model contains the following fields: user, playdate_post, created_on, content.
+* ForeignKey relation between the user field and the User model id field.
+* ForeignKey relation between the Playdate field and the User model playdate_post field.
+
+#### Review Model
+The Review model contains the following fields: user, playdate_post, created_on, comment, attendance, bring_this, age_recommendation.
+* ForeignKey relation between the user field and the User model id field.
+* ForeignKey relation between the Playdate field and the User model playdate_post field.
+
+#### Contact Model
+The Contact model contains the following fields: name, email, subject, message, created_on.
+
 ## Features
 
 ### Future features
