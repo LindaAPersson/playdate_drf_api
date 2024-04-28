@@ -29,6 +29,11 @@ To see the Epic and user stroies in full: [Project Board](https://github.com/use
 
 ## User stories
 
+### Admin user
+The back-end section of the project focuses on its administrative side, so that's the only user story I will focus on:
+
+As an admin, I want to be able to create, edit, and delete users, playdates, comments, and reviews so that I can have control over the content of the application and remove any potential inappropriate content. Additionally, I want to be able to read all the contact forms that users send.
+
 ## Database Design
 
 ### Models
